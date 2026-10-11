@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Emma Gillham's portfolio of front-end, UX/UI, data analysis, and creative business projects.">
+  <title>Emma Gillham — UX & Front-End Portfolio</title>
+  <style>
+    :root{--paper:#f8f7f2;--ink:#20251f;--muted:#62675f;--line:#d9dcd2;--green:#d6f36a;--blue:#dce9ff;--orange:#fa8b62;--white:#fffefa;--serif:Georgia,"Times New Roman",serif;--sans:Arial,Helvetica,sans-serif}
+    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;color:var(--ink);background:var(--paper);font-family:var(--sans);line-height:1.55}a{color:inherit}.wrap{width:min(1100px,calc(100% - 48px));margin:0 auto}
+    header{display:flex;justify-content:space-between;align-items:center;padding:24px 0;border-bottom:1px solid var(--line)}.wordmark{font-weight:800;letter-spacing:-.04em;text-decoration:none}nav{display:flex;gap:26px;font-size:.9rem}nav a{text-decoration:none;color:var(--muted)}nav a:hover,nav a:focus-visible{color:var(--ink);text-decoration:underline}
+    .hero{min-height:470px;display:grid;grid-template-columns:1.25fr .75fr;gap:48px;align-items:center;padding:72px 0 78px}.eyebrow,.kicker{text-transform:uppercase;letter-spacing:.13em;font-size:.72rem;font-weight:800}.eyebrow{color:#55633b}h1{max-width:720px;margin:18px 0;font:500 clamp(3.2rem,7vw,6.3rem)/.98 var(--serif);letter-spacing:-.065em}.lede{max-width:560px;color:var(--muted);font-size:1.08rem}.actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}.button{display:inline-flex;align-items:center;justify-content:center;min-height:46px;padding:0 18px;border:1px solid var(--ink);border-radius:999px;text-decoration:none;font-weight:700;font-size:.9rem;transition:transform .18s ease,background .18s ease}.button:hover{transform:translateY(-2px)}.button.primary{background:var(--ink);color:white}.button.primary:hover{background:#41483d}.button.secondary:hover{background:var(--green)}
+    .hero-art{position:relative;min-height:310px;display:grid;place-items:center}.sun{position:absolute;width:250px;height:250px;border-radius:50%;background:var(--green);right:24px;top:24px}.orbit{position:absolute;width:300px;height:190px;border:1px solid #7b8c50;border-radius:50%;transform:rotate(-28deg)}.note{position:absolute;padding:15px 18px;background:var(--white);border:1px solid var(--line);box-shadow:5px 6px 0 var(--ink);font:1.05rem var(--serif)}.note.one{top:54px;left:2px;transform:rotate(-7deg)}.note.two{right:0;bottom:34px;transform:rotate(5deg);background:var(--blue)}.asterisk{position:absolute;left:35%;top:38%;color:var(--orange);font-size:4.4rem;line-height:1}
+    section{padding:68px 0;border-top:1px solid var(--line)}.section-head{display:flex;justify-content:space-between;align-items:end;gap:20px;margin-bottom:28px}h2{margin:0;font:500 clamp(2.2rem,4vw,3.4rem)/1 var(--serif);letter-spacing:-.045em}.section-head p{max-width:380px;margin:0;color:var(--muted)}
+    .project{margin:0 0 22px;padding:26px;border:1px solid var(--line);background:var(--white);border-radius:18px}.project.dino{background:#edf3e1}.project.data{background:#f0ecfb}.project.shop{background:#fff0e9}.project-top{display:flex;justify-content:space-between;gap:12px;align-items:center}.number{font:1.1rem var(--serif);color:var(--muted)}.tag{border:1px solid #bfc5b8;border-radius:99px;padding:5px 10px;font-size:.68rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase}.project h3{margin:24px 0 8px;font:500 2rem/1.05 var(--serif);letter-spacing:-.035em}.project p{color:var(--muted);margin:0 0 18px;max-width:700px}.gallery{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:20px 0}.gallery.single{grid-template-columns:1fr}.gallery figure{margin:0;min-width:0}.gallery img{display:block;width:100%;height:auto;border:1px solid #d9dcd2;border-radius:10px;background:white}.gallery figcaption{padding:7px 2px 0;color:var(--muted);font-size:.8rem}.data-gallery{display:grid;grid-template-columns:1.1fr .9fr;gap:14px;margin:20px 0}.data-gallery figure{display:flex;flex-direction:column;justify-content:center;margin:0;padding:12px;background:white;border:1px solid var(--line);border-radius:10px}.data-gallery img{display:block;max-width:100%;max-height:320px;margin:auto;object-fit:contain}.data-gallery figcaption{margin-top:8px;color:var(--muted);font-size:.8rem}.project-links{display:flex;flex-wrap:wrap;gap:18px;margin-top:18px}.text-link{font-weight:700;text-decoration-thickness:1px;text-underline-offset:4px}.role-line{margin-top:4px;color:#55633b;font-size:.88rem;font-weight:700}.disclosure{color:var(--muted);font-size:.82rem}
+    .project.ryde{background:#e9efff}.insight-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:22px 0}.insight{padding:17px;background:var(--white);border:1px solid var(--line);border-radius:12px}.insight strong{display:block;margin-bottom:7px;font:500 1.15rem/1.15 var(--serif)}.insight p{margin:0;font-size:.9rem}.status-note{padding:13px 15px;background:#fff8d7;border-radius:10px;color:#4e503f;font-size:.87rem}
+    .about-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px}.about-grid p{color:var(--muted)}.about-grid p:first-child{margin-top:0;font-size:1.12rem;color:var(--ink)}.skill-list{display:flex;flex-wrap:wrap;gap:9px;margin-top:20px}.skill-list span{padding:8px 12px;border-radius:99px;background:#e7e9e1;font-size:.85rem}.school-card{margin-top:26px;padding:22px;background:var(--blue);border-radius:14px}.school-card strong{display:block;margin-bottom:4px}.contact{display:flex;justify-content:space-between;align-items:end;gap:30px;padding-bottom:84px}.contact p{color:var(--muted);max-width:440px}footer{padding:20px 0 28px;border-top:1px solid var(--line);color:var(--muted);font-size:.8rem}
+    @media(max-width:720px){.wrap{width:min(100% - 32px,560px)}header{align-items:flex-start;flex-direction:column;gap:14px}nav{flex-wrap:wrap;gap:17px}.hero{grid-template-columns:1fr;gap:16px;padding:56px 0 42px}.hero-art{min-height:240px}.sun{width:190px;height:190px;right:15%;top:10px}.orbit{width:245px;height:150px}.note.one{left:8%;top:27px}.note.two{right:7%;bottom:16px}.section-head{display:block}.section-head p{margin-top:12px}.project{padding:20px}.gallery,.data-gallery,.insight-grid{grid-template-columns:1fr}.about-grid{grid-template-columns:1fr;gap:20px}.contact{display:block}}
+    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{transition-duration:.01ms!important}}
+  </style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <a class="wordmark" href="#top">EMMA GILLHAM <span aria-hidden="true">↗</span></a>
+    <nav aria-label="Main navigation"><a href="#work">Work</a><a href="#about">About</a><a href="#contact">Contact</a></nav>
+  </header>
+  <main id="top">
+    <section class="hero" style="border-top:0">
+      <div>
+        <div class="eyebrow">Information Systems · BYU</div>
+        <h1>Thoughtful websites for curious people.</h1>
+        <p class="lede">I’m Emma, an Information Systems student interested in UX and front-end development. I enjoy turning ideas into clear, welcoming digital experiences.</p>
+        <div class="actions"><a class="button primary" href="#work">Explore my work ↓</a><a class="button secondary" href="https://www.linkedin.com/in/emmagillham/" target="_blank" rel="noreferrer">LinkedIn ↗</a></div>
+      </div>
+      <div class="hero-art" aria-hidden="true"><div class="sun"></div><div class="orbit"></div><div class="note one">ideas → useful things</div><div class="asterisk">✳</div><div class="note two">made with curiosity</div></div>
+    </section>
+
+    <section id="work">
+      <div class="section-head"><h2>Selected work</h2><p>Projects where I bring together design, development, data, and creativity.</p></div>
+
+      <article class="project ryde">
+        <div class="project-top"><span class="number">01 / Team project · In progress</span><span class="tag">UX Planning + Testing</span></div>
+        <h3>BYU Ryde</h3>
+        <p>A shuttle app prototype that helps BYU students explore routes, stops, and scheduled departures. Our team planned the experience in Figma and used AI-assisted tools to create and revise the website prototype.</p>
+        <div class="role-line">My focus: product brainstorming, Figma planning, prototype testing, and design feedback</div>
+        <div class="insight-grid" aria-label="Usability test findings and design opportunities">
+          <div class="insight"><strong>Keep the map</strong><p>The tester liked seeing the interactive map and their current location in both versions.</p></div>
+          <div class="insight"><strong>Make stops easier to find</strong><p>The tester was unsure how to reach a bus stop. We plan to add clearer directions and more specific stop locations, with recognizable buildings on the map.</p></div>
+          <div class="insight"><strong>Search by destination</strong><p>A search for an apartment complex returned a route. We identified an opportunity to show which route is closest to a searched location.</p></div>
+        </div>
+        <p class="status-note"><strong>Early feedback:</strong> one tester so far. These findings are guiding our next design iteration. The project is in progress through December 2026; bus arrivals, positions, and crowding in the prototype use simulated data.</p>
+        <div class="project-links"><a class="text-link" href="https://github.com/emmag202/BYU-Route" target="_blank" rel="noreferrer">View the project repository ↗</a></div>
+      </article>
+
+      <article class="project dino">
+        <div class="project-top"><span class="number">02 / Personal project</span><span class="tag">Design + Front-End</span></div>
+        <h3>Emma G Dino Adventures</h3>
+        <p>A playful multi-page website for my original dinosaur characters. Visitors can meet the crew, read their stories, and take a personality quiz.</p>
+        <div class="role-line">My role: Design and front-end development · HTML, CSS, JavaScript</div>
+        <div class="gallery">
+          <figure><img src="openadventure.png" alt="Dino Doodles website homepage with original dinosaur character artwork and a quiz call to action" loading="lazy"><figcaption>Homepage introducing the dinosaur world and quiz</figcaption></figure>
+          <figure><img src="meetdino.png" alt="Dino Doodles character gallery showing original dinosaur characters" loading="lazy"><figcaption>Character gallery for exploring the dinosaur friends</figcaption></figure>
+        </div>
+        <div class="project-links"><a class="text-link" href="https://emmag202.github.io/Emma-G-Dinosaur-Website/index.html" target="_blank" rel="noreferrer">Visit the live website ↗</a></div>
+      </article>
+
+      <article class="project data">
+        <div class="project-top"><span class="number">03 / Startup Bootcamp</span><span class="tag">Data Analysis</span></div>
+        <h3>DineMind AI</h3>
+        <p>Data analysis work supporting an early-stage startup project. I used SQL to clean and analyze data, identify outliers, and support business decisions, then used Excel visualizations to communicate key metrics.</p>
+        <div class="role-line">My role: Data cleaning and analysis · SQL, Excel</div>
+        <div class="data-gallery">
+          <figure><img src="agegraph.png" alt="Pie chart showing survey respondent ages, with most respondents aged 20 or 21" loading="lazy"><figcaption>Survey respondent age distribution</figcaption></figure>
+          <figure><img src="usegraph.png" alt="Pie chart showing who respondents would use the product with, including themselves, a significant other, friends or roommates, and family" loading="lazy"><figcaption>Who respondents would use it with</figcaption></figure>
+        </div>
+        <p class="disclosure">These charts are included as examples of my project work; I can share more about the analysis and context in conversation.</p>
+      </article>
+
+      <article class="project shop">
+        <div class="project-top"><span class="number">04 / Creative business</span><span class="tag">Entrepreneurship</span></div>
+        <h3>Emma G Dino Doodles Shop</h3>
+        <p>I create and sell original dinosaur artwork through an online storefront. I use customer surveys and social media feedback to understand product preferences and guide marketing.</p>
+        <div class="role-line">My role: Original artwork, storefront, marketing, and customer feedback</div>
+        <div class="gallery single">
+          <figure><img src="store.png" alt="Emma G Dino Doodles online shop with original dinosaur-themed products" loading="lazy"><figcaption>Online shop featuring dinosaur-themed products</figcaption></figure>
+        </div>
+        <div class="project-links"><a class="text-link" href="https://emma-g-dino-doodles.printify.me/" target="_blank" rel="noreferrer">Visit the online shop ↗</a></div>
+      </article>
+    </section>
+
+    <section id="about">
+      <div class="section-head"><h2>A little about me</h2><p>People, details, and making things work well are all part of the process.</p></div>
+      <div class="about-grid">
+        <div><p>I’m studying Information Systems at Brigham Young University, with an emphasis in data and business analysis. I’m exploring roles where I can combine technology, creative problem-solving, and an understanding of what people need.</p><p>Outside of class, I run Emma G Dino Doodles and enjoy hiking, baking, and spending time with friends.</p><div class="school-card"><strong>Brigham Young University</strong>Information Systems · Expected April 2028</div></div>
+        <div><div class="kicker">Tools I’ve used</div><div class="skill-list"><span>HTML</span><span>CSS</span><span>JavaScript</span><span>SQL</span><span>Excel</span><span>Tableau</span><span>GitHub</span></div><p>I’m continuing to build my front-end and UX skills through personal projects and coursework.</p></div>
+      </div>
+    </section>
+
+    <section id="contact" class="contact">
+      <div><div class="eyebrow">Have a project or opportunity?</div><h2>Let’s connect.</h2><p>I’d love to hear about internships and early-career opportunities in UX, front-end development, or related roles.</p></div>
+      <div class="actions"><a class="button primary" href="mailto:emmagillham14@gmail.com">Email me ↗</a><a class="button secondary" href="https://www.linkedin.com/in/emmagillham/" target="_blank" rel="noreferrer">LinkedIn ↗</a></div>
+    </section>
+  </main>
+  <footer>© 2026 Emma Gillham · Made with curiosity in Provo, Utah</footer>
+</div>
+</body>
+</html>
